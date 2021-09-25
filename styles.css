@@ -1,0 +1,179 @@
+body {
+  height: 100vh;
+  background-color: #090b1a;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  -ms-grid-rows: 1.5fr 3.5fr 1.5fr;
+  grid-template-rows: 1.5fr 3.5fr 1.5fr;
+}
+
+body .container {
+  background-color: #1b1938;
+  padding-left: 4rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1.7fr 0.8fr 1fr;
+  grid-template-rows: 1.7fr 0.8fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+body .container .hero {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  width: 100%;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(170, 92, 219, 0.733))
+    ),
+    url(image-header-desktop.jpg) no-repeat top center;
+  background: linear-gradient(to right, rgba(170, 92, 219, 0.733)),
+    url(image-header-desktop.jpg) no-repeat top center;
+  background-size: cover;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+body .container .heading {
+  font-family: "Inter", sans-serif;
+  padding-top: 2rem;
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+body .container .heading .highlight {
+  color: rgba(170, 92, 219, 0.733);
+}
+
+body .container .about {
+  font-family: "Lexend Deca", sans-serif;
+  width: 86%;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: -20px;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding-bottom: 0;
+}
+
+body .container .queue {
+  width: 90%;
+  font-family: "Inter", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body .container .queue .head {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+body .container .queue .rest {
+  font-weight: 600;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1050px) {
+  body .container {
+    margin-bottom: 2rem;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  body .container .hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(170, 92, 219, 0.733))
+      ),
+      url(image-header-mobile.jpg) no-repeat top center;
+    background: linear-gradient(to right, rgba(170, 92, 219, 0.733)),
+      url(image-header-mobile.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  body .container .heading {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  body .container .about {
+    margin: auto;
+    margin-top: -20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  body .container .queue {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    padding: 1rem;
+    margin-top: -40px;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  body .container .queue .head {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    grid-row: unset;
+    font-size: 1.5rem;
+  }
+  body .container .queue .rest {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
